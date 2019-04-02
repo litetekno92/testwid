@@ -37,7 +37,23 @@ class _MyHomePageState extends State<MyHomePage>{
         title: new Text('Flutter Demo'),
       ),
       body: new Center(
-        child: new MyWidget(),
+        child: new ListView(
+            children: <Widget>[
+              ListTile(
+                title: Text("First"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("Second"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              MyWidget(),
+            ],
+          ),
       ),
     );
 
