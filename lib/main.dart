@@ -39,6 +39,8 @@ class _MyHomePageState extends State<MyHomePage>{
       body: new Center(
         child: new ListView(
             children: <Widget>[
+              MyWidget(),
+              new Divider(height: 2.0,),
               ListTile(
                 title: Text("First"),
                 onTap: () {
@@ -51,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage>{
                   Navigator.pop(context);
                 },
               ),
-              MyWidget(),
+              
             ],
           ),
       ),
