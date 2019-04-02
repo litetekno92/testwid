@@ -39,7 +39,9 @@ class _MyHomePageState extends State<MyHomePage>{
       body: new Center(
         child: new ListView(
             children: <Widget>[
-              MyWidget(),
+              new Container (
+                child: MyWidget(),
+              ),
               new Divider(height: 2.0,),
               ListTile(
                 title: Text("First"),
