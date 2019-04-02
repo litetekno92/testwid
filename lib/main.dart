@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testwid/widgets.dart';
+//import 'package:testwid/widgets.dart';
+import 'package:testwid/mywidget.dart';
 
 void main() {
   runApp(new MyApp());
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage>{
         title: new Text('Flutter Demo'),
       ),
       body: new Center(
-        child: new Texty(),
+        child: new MyWidget(),
       ),
     );
 
