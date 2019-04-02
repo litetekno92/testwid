@@ -6,15 +6,17 @@ void main() {
   runApp(new MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+
     return new MaterialApp(
       title: 'Flutter Demo',
       // home: new Texty(),
       home: new MyHomePage(),
     );
   }
+
 }
 
 class MyHomePage extends StatefulWidget {
@@ -26,16 +28,39 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context) {
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Flutter Demo'),
       ),
       body: new Center(
-        child: MyWidget(),
+        child: new ListView(
+            children: <Widget>[
+              new Container (
+                child: MyWidget(),
+              ),
+              new Divider(height: 2.0,),
+              ListTile(
+                title: Text("First"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text("Second"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              
+            ],
+          ),
       ),
     );
+
   }
 }
+
